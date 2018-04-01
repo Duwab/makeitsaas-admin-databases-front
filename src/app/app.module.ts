@@ -20,3 +20,10 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
+/*
+References:
+- https://alligator.io/angular/ng-bootstrap/
+- https://github.com/akserg/ng2-dnd
+*/

@@ -1,18 +1,17 @@
 <h4>Simple sortable</h4>
-<button (click)="addField()">Ajouter</button>
+
 <div class="row">
     <div class="col-sm-6">
-        <div class="panel panel-success">
-            <div class="panel-heading">
-                Favorite drinks
+        <div class="card">
+            <div class="card-header">
+              Fields
+              <button (click)="addField()" type="button" class="btn btn-sm btn-primary pull-right">Ajouter</button>
             </div>
-            <div class="panel-body">
-                <ul class="list-group" dnd-sortable-container [sortableData]="listOne">
-                    <li *ngFor="let item of listOne; let i = index" class="list-group-item" dnd-sortable [sortableIndex]="i">
-                      <entity-field [field]="item"></entity-field>
-                    </li>
-                </ul>
-            </div>
+            <ul class="list-group list-group-flush" dnd-sortable-container [sortableData]="listOne">
+                <li *ngFor="let item of listOne; let i = index" class="list-group-item" dnd-sortable [sortableIndex]="i">
+                  <entity-field [field]="item"></entity-field>
+                </li>
+            </ul>
         </div>
     </div>
     <div class="col-sm-6">

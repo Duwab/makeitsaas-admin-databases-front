@@ -2,7 +2,8 @@ import {Component} from '@angular/core';
 
 @Component({
   selector: 'entity',
-  templateUrl: './entity.component.html'
+  templateUrl: './entity.component.html',
+  styleUrls: ['./entity.component.scss']
 })
 export class EntityComponent {
   listOne: Array<any> = [
