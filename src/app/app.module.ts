@@ -1,9 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-// import { DndModule } from 'ng2-dnd';
 
 import { AppComponent } from './app.component';
 import { EntityModule } from './components/entity/entity.module'
+
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { EntityModule } from './components/entity/entity.module'
   ],
   imports: [
     BrowserModule,
-    EntityModule
+    EntityModule,
+    NgbModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
