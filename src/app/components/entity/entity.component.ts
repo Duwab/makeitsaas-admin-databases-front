@@ -16,4 +16,8 @@ export class EntityComponent {
   addField() {
     this.listOne.push({id: this.listOne.length,name: `field_${this.listOne.length}`, type: "string"});
   }
+
+  removeField(id) {
+    this.listOne = this.listOne.filter(field => field.id !== id);
+  }
 }

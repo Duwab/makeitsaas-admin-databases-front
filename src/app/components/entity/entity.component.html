@@ -5,11 +5,16 @@
         <div class="card">
             <div class="card-header">
               Fields
-              <button (click)="addField()" type="button" class="btn btn-sm btn-primary pull-right">Ajouter</button>
+              <button (click)="addField()" type="button" class="btn btn-sm btn-primary pull-right">
+                <i class="fa fa-plus"></i>
+              </button>
             </div>
             <ul class="list-group list-group-flush" dnd-sortable-container [sortableData]="listOne">
-                <li *ngFor="let item of listOne; let i = index" class="list-group-item" dnd-sortable [sortableIndex]="i">
+                <li *ngFor="let item of listOne; let i = index" class="list-group-item justify-content-between" dnd-sortable [sortableIndex]="i">
                   <entity-field [field]="item"></entity-field>
+                  <button (click)="removeField(item.id)" type="button" class="btn btn-sm btn-danger">
+                    <i class="fa fa-trash"></i>
+                  </button>
                 </li>
             </ul>
         </div>
